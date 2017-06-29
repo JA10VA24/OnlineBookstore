@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <servlet>
+    <servlet-name>MyServlet</servlet-name>
+    <servlet-class>com.gcl.servlet.MyServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UserServlet</servlet-name>
+  	<servlet-class>com.gcl.servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CategoryServlet</servlet-name>
+  	<servlet-class>com.gcl.servlet.CategoryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BookServlet</servlet-name>
+    <servlet-class>com.gcl.servlet.BookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CartServlet</servlet-name>
+    <servlet-class>com.gcl.servlet.CartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderServlet</servlet-name>
+    <servlet-class>com.gcl.servlet.OrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <servlet-class>com.gcl.admin.AdminLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminCategoryServlet</servlet-name>
+    <servlet-class>com.gcl.admin.AdminCategoryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminBookServlet</servlet-name>
+    <servlet-class>com.gcl.admin.AdminBookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddBookServlet</servlet-name>
+    <servlet-class>com.gcl.admin.AddBookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminOrderServlet</servlet-name>
+    <servlet-class>com.gcl.admin.AdminOrderServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+  <filter>
+	<filter-name>CartFilter</filter-name>
+	<filter-class>com.gcl.filter.CartFilter</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>IndexFilter</filter-name>
+  	<filter-class>com.gcl.filter.IndexFilter</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>AdminFilter</filter-name>
+  	<filter-class>com.gcl.filter.AdminFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+ 	 <filter-name>IndexFilter</filter-name>
+ 	 <url-pattern>/index.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+	<filter-name>CartFilter</filter-name>
+	<url-pattern>/CartServlet</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+	<filter-name>AdminFilter</filter-name>
+	<url-pattern>/pages/after/main.jsp</url-pattern>
+  </filter-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>MyServlet</servlet-name>
+    <url-pattern>/MyServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UserServlet</servlet-name>
+  	<url-pattern>/UserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CategoryServlet</servlet-name>
+  	<url-pattern>/CategoryServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookServlet</servlet-name>
+    <url-pattern>/BookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CartServlet</servlet-name>
+    <url-pattern>/CartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderServlet</servlet-name>
+    <url-pattern>/OrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <url-pattern>/AdminLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminCategoryServlet</servlet-name>
+    <url-pattern>/AdminCategoryServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminBookServlet</servlet-name>
+    <url-pattern>/AdminBookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddBookServlet</servlet-name>
+    <url-pattern>/AddBookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminOrderServlet</servlet-name>
+    <url-pattern>/AdminOrderServlet</url-pattern>
+  </servlet-mapping>
+
+</web-app>
